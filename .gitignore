@@ -1,0 +1,16 @@
+# Arquivos de simulacao e temporarios do LTspice
+*.raw
+*.op.raw
+*.log
+*.net
+*.cir
+*.bak
+*~
+
+# Backups temporarios
+*_backup.asc
+
+# Arquivos do sistema operacional
+Thumbs.db
+.DS_Store
+desktop.ini

@@ -1,0 +1,28 @@
+* LM741 Op-Amp - Behavioral Macromodel
+* Compatible with Veronese 7-pin symbol: in+ in- V+ V- out comp1 comp2
+* Open-loop gain: 200,000 V/V | Output clamps near supply rails
+*
+.subckt LM741v 1 2 3 4 5 6 7
+* Pin 1=in+  2=in-  3=V+  4=V-  5=out  6=comp1  7=comp2
+*
+* Compensation pins (unused - avoid floating nodes)
+Rdum1 6 0 1G
+Rdum2 7 0 1G
+*
+* Input impedance (2 Megohm, typical LM741)
+Rin 1 2 2Meg
+*
+* High-gain stage with output clamping to rails
+* Output saturates at Vee+1.5 to Vcc-1.5 (typical for LM741)
+B1 mid 0 V = limit(200000*V(1,2), V(4)+1.5, V(3)-1.5)
+*
+* Output resistance (75 ohm typical)
+Rout mid 5 75
+*
+* Slew rate approximation (C on output node: ~0.5 V/us)
+Csr 5 0 100n
+*
+* Quiescent supply current
+ISS 3 4 1.7m
+*
+.ends LM741v

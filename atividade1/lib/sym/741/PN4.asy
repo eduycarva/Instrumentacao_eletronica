@@ -1,0 +1,38 @@
+Version 4
+SymbolType CELL
+LINE Normal 0 32 0 -32
+LINE Normal 0 0 -16 0
+LINE Normal 0 -21 24 -27
+LINE Normal 14 -40 24 -27
+LINE Normal 0 -21 14 -40
+LINE Normal 0 32 0 -32
+LINE Normal 0 21 16 32
+LINE Normal 0 0 48 32
+LINE Normal 16 21 32 32
+LINE Normal 0 -12 64 32
+LINE Normal 0 11 16 21
+LINE Normal 32 -42 32 -48
+LINE Normal 19 -33 32 -42
+WINDOW 0 64 -32 Left 2
+WINDOW 38 96 0 Center 2
+SYMATTR SpiceModel PN4
+SYMATTR Prefix X
+SYMATTR Description BJT PNP lateral; 4 coletores
+PIN 16 32 NONE 0
+PINATTR PinName C1
+PINATTR SpiceOrder 1
+PIN 32 32 NONE 0
+PINATTR PinName C2
+PINATTR SpiceOrder 2
+PIN 48 32 NONE 0
+PINATTR PinName C3
+PINATTR SpiceOrder 3
+PIN 64 32 NONE 0
+PINATTR PinName C4
+PINATTR SpiceOrder 4
+PIN -16 0 NONE 8
+PINATTR PinName B
+PINATTR SpiceOrder 5
+PIN 32 -48 NONE 8
+PINATTR PinName E
+PINATTR SpiceOrder 6
